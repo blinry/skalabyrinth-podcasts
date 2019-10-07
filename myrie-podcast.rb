@@ -24,7 +24,7 @@ Dir.glob("#{ARGV.first}/*.mp3").sort.each do |file|
     title = "#{number}: #{name}"
     mp3 = "https://www.karlabyrinth.org/stories/#{file2}"
     guid = file2
-    pubdate = File.mtime(file)
+    pubdate = File.mtime(file).rfc2822
     size = File.size(file)
 
     # And write an item.
