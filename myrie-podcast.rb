@@ -16,9 +16,10 @@ puts <<HERE
         <itunes:author>karlabyrinth</itunes:author>
 HERE
 
-Dir.glob("#{ARGV.first}/*.mp3").each do |file|
+Dir.glob("#{ARGV.first}/*.mp3").sort.each do |file|
     # Get metadata.
     number = file[/\d+/]
+    file = file.gsub("//", "/").split("/")[-2..-1].join("/")
     name = file.split("/").last[/[A-Za-z]+/].gsub(/([A-Z])/, " \\1").strip
     title = "#{number}: #{name}"
     mp3 = "https://www.karlabyrinth.org/stories/#{file}"
