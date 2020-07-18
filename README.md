@@ -1,5 +1,7 @@
-A script that creates an RSS podcast feed for Karla Byrinth's [Myrie Zange](https://www.karlabyrinth.org/stories/Myrie.html).
+Scripts that create RSS podcast feeds for some of karlabyrinth's stories.
 
-To use it, install Ruby, have all the MP3 files in a directory, and run:
+Usage examples:
 
     ruby myrie-podcast.rb MyrieZange-DasSpiel > Myrie-RSSFeed.rss
+
+    ruby und-dann-kam-alles-anders-podcast.rb UndDannKamAllesAnders > UndDannKamAllesAnders-RSSFeed.rss
