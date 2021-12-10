@@ -1,4 +1,4 @@
-Scripts that create RSS podcast feeds for some of karlabyrinth's stories.
+Scripts that create RSS podcast feeds for some of skalabyrinth's stories.
 
 Usage examples:
 

@@ -13,7 +13,7 @@ puts <<HERE
             <url>https://www.karlabyrinth.org/stories/MyrieZangeDieSymmetrieDasSpiel400x.png</url>
         </image>
         <title>Myrie Zange: Das Spiel</title>
-        <itunes:author>karlabyrinth</itunes:author>
+        <itunes:author>skalabyrinth</itunes:author>
 HERE
 
 Dir.glob("#{ARGV.first}/*.mp3").sort.each do |file|
