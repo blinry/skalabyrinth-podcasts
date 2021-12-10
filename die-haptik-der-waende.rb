@@ -10,9 +10,9 @@ puts <<HERE
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
     <channel>
         <image>
-            <url>https://www.karlabyrinth.org/stories/UndDannKamAllesAnders400x.png</url>
+            <url>https://www.karlabyrinth.org/books/DieHaptikDerWaende400x.png</url>
         </image>
-        <title>Und dann kam alles anders</title>
+        <title>Die Haptik der Wände</title>
         <itunes:author>skalabyrinth</itunes:author>
 HERE
 
@@ -22,7 +22,7 @@ Dir.glob("#{ARGV.first}/*.mp3").sort.each do |file|
     file2 = file.gsub("//", "/").split("/")[-2..-1].join("/")
     name = file2.split("/").last[/[A-Za-z]+/].gsub(/([A-Z])/, " \\1").strip
     title = "#{number}: #{name}"
-    mp3 = "https://www.karlabyrinth.org/stories/#{file2}"
+    mp3 = "https://www.karlabyrinth.org/books/#{file2}"
     guid = file2
     pubdate = File.mtime(file).rfc2822
     size = File.size(file)
