@@ -20,7 +20,7 @@ Dir.glob("#{ARGV.first}/*.mp3").sort.each do |file|
     # Get metadata.
     number = file[/\d+/]
     file2 = file.gsub("//", "/").split("/")[-2..-1].join("/")
-    name = file2.split("/").last[/[A-Za-z]+/].gsub(/([A-Z])/, " \\1").strip
+    name = file2.split("/").last.split(".").first.split("-")[1..-1].join(" -").gsub(/([A-Z])/, " \\1").strip
     title = "#{number}: #{name}"
     mp3 = "https://www.karlabyrinth.org/books/#{file2}"
     guid = file2
